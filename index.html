@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="CSS/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="CSS/styles.css" rel="stylesheet" type="text/css">
+    <script src="JS/jquery-3.0.0.js"></script>
+    <script src="JS/scripts.js"></script>
+    <title>Places</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Oh, The Places You've Gone!</h1>
+      <form id="newPlaces">
+        <label for="locations"></label>
+        <input id="locations" type="text" class="form-control">
+        <label for="landmarks"></label>
+        <input id="landmarks" type="text" class="form-control">
+        <label for="timeOfYear"></label>
+        <input id="timeOfYear" type="text"
+         class="form-control">
+         <label for="notes"></label>
+         <input id="notes" type="text" class="form-control">
+         <button type="submit" class="btn btn-primary" ></button>
+      </form>
+
+      <div class="placeList">
+        <h2>Places</h2>
+        <ul id="locationsList">
+        </ul>
+      </div>
+      
+      <div id="results">
+        <p>Location: <span class="locations"></span></p>
+        <p>Landmarks: <span class="landmarks"></span></p>
+        <p>Time of Year: <span class="timeOfYear"></span></p>
+        <p>Notes: <span class="notes"></span></p>
+      </div>
+
+    </div>
+  </body>
+</html>
