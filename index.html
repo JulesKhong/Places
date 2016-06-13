@@ -11,24 +11,25 @@
     <div class="container">
       <h1>Oh, The Places You've Gone!</h1>
       <form id="newPlaces">
-        <label for="locations"></label>
-        <input id="locations" type="text" class="form-control">
-        <label for="landmarks"></label>
-        <input id="landmarks" type="text" class="form-control">
-        <label for="timeOfYear"></label>
-        <input id="timeOfYear" type="text"
+        <label for="locations">Locations</label>
+        <input id="userLocations" type="text" class="form-control">
+        <label for="landmarks">Landmarks</label>
+        <input id="userLandmarks" type="text" class="form-control">
+        <label for="userTimeOfYear">Time of Year</label>
+        <input id="userTimeOfYear" type="text"
          class="form-control">
-         <label for="notes"></label>
-         <input id="notes" type="text" class="form-control">
-         <button type="submit" class="btn btn-primary" ></button>
+         <label for="notes">Notes</label>
+         <input id="userNotes" type="text" class="form-control">
+         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
 
       <div class="placeList">
         <h2>Places</h2>
         <ul id="locationsList">
+
         </ul>
       </div>
-      
+
       <div id="results">
         <p>Location: <span class="locations"></span></p>
         <p>Landmarks: <span class="landmarks"></span></p>
