@@ -1,3 +1,5 @@
+
+// 1/3 OBJECT STRUCTURE
 function Place (locations, landmarks, timeOfYear, notes){
   this.locations = locations;
   this.landmarks = landmarks;
@@ -5,18 +7,13 @@ function Place (locations, landmarks, timeOfYear, notes){
   this.notes = notes;
 }
 
-
-Place.prototype.locations = function(){
-  return this.locations.toUpperCase();
-}
-
 // TO RESET FIELDS
-// function resetFields() {
-//   $("input#locations").val("");
-//   $("input#landmarks").val("");
-//   $("input#timeOfYear").val("");
-//   $("input#notes").val("");
-// }
+function resetFields() {
+  $("input#userLocations").val("");
+  $("input#userLandmarks").val("");
+  $("input#userTimeOfYear").val("");
+  $("input#userNotes").val("");
+}
 
 // USER INTERFACE LOGIC
 
@@ -25,13 +22,15 @@ $(document).ready(function(){
   $("#newPlaces").submit(function(){
     event.preventDefault();
 
+    // 2/3 DEFINING ELEMENTS TO PLUG INTO STRUCTURE
     var locations = $("input#userLocations").val();
     var landmarks = [$("input#userLandmarks").val()];
     var timeOfYear = $("input#userTimeOfYear").val();
     var notes = $("input#userNotes").val();
+    // 3/3 DEFINING SPECIFIC OBJECT THAT WILL COMBINE STRUCTURE AND ELEMENTS
     var newPlace = new Place(locations, landmarks, timeOfYear, notes);
 
-    var newPlaceLocations = newPlace.locations;
+    // var newPlaceLocations = newPlace.locations;
 
 
     $("ul#locationsList").append("<li><span class='local'>" + newPlace.locations + "</span></li>");
@@ -44,6 +43,6 @@ $(document).ready(function(){
       $(".timeOfYear").text(newPlace.timeOfYear);
       $(".notes").text(newPlace.notes);
     });
-
+    resetFields();
   });
 });
